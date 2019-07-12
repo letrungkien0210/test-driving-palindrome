@@ -36,4 +36,10 @@ describe('palindrome-test', function(){
     it('should return false for argument with only two spaces', function() {
         expect(isPalindrome('  ')).to.be.false;
     })
+
+    // Exception tests
+    it('should throw an exception if argument is missing', function() {
+        const call = function(){ isPalindrome(); };
+        expect(call).to.throw(Error, 'Invalid argument');
+    })
 })
