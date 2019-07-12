@@ -27,4 +27,13 @@ describe('palindrome-test', function(){
     it('should return false for argument mom dad', function() {
         expect(isPalindrome('mom dad')).to.be.false;
     })
+
+    // NEGATIVE TESTS
+    it('should return false when argument is an empty string', function() {
+        expect(isPalindrome('')).to.be.false;
+    })
+
+    it('should return false for argument with only two spaces', function() {
+        expect(isPalindrome('  ')).to.be.false;
+    })
 })
